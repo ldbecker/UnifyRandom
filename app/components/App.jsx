@@ -2,6 +2,7 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const axios = require('axios');
 const RandomNumber = require('./RandomNumber.jsx');
+const RandomImage = require('./RandomImage.jsx');
 
 class App extends React.Component {
 	constructor(props) {
@@ -11,8 +12,9 @@ class App extends React.Component {
   render() {
     return (
         <div>
-          <RandomNumber />
+          <RandomNumber/>
           <br/>-----<br/>
+          <RandomImage/>
         </div>
       );
   }
