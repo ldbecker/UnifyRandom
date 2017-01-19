@@ -20,7 +20,6 @@ router.get('/randomImage', function(req, res, next) {
 	axios.get('https://www.random.org/integers/?num=10000&min=0&max=255&col=1&base=16&format=plain&rnd=new')
 	.then(function(resp) {
 		var numbers = resp.data.split('\n');
-		console.log('len:', numbers.length);
 		for(var i = 0; i < 10000; i++) {
 			imgData[i] = Number('0x' + numbers[i]);
 		}
